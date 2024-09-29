@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - Perfume Heaven</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        /* Navigation Bar */
+        .top-bar {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px; /* Updated for consistency */
+        }
+
+        .top-bar .title-area h1 a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.8em;
+        }
+
+        .top-bar .title-area h1 {
+            margin: 0;
+        }
+
+        .top-bar .left {
+            list-style: none;
+            margin: 0;
+            padding: 0; /* Reset padding for consistency */
+            display: flex;
+            align-items: center;
+        }
+
+        .top-bar li {
+            padding: 0 15px; /* Updated for consistency */
+        }
+
+        .top-bar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .top-bar a:hover {
+            color: #ddd;
+        }
+
+        /* Main Content */
+        .content-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.8em; /* Consistent heading size */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em; /* Consistent paragraph size */
+            color: #555; /* Text color for paragraphs */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333; /* Ensure footer background matches */
+            color: white; /* Ensure footer text color matches */
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-bar">
+        <div class="title-area">
+            <h1><a href="/">Perfume Heaven</a></h1>
+        </div>
+        <section class="top-bar-section">
+            <ul class="left">
+                <li><a href="/about">About</a></li>
+                <li><a href="/products">Perfume Collection</a></li>
+                <li><a href="/cart">View Cart</a></li>
+                <li><a href="/orders">My Orders</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <% if (user) { %>
+                    <li><a href="/profile">My Account</a></li>
+                    <li><a href="/logout">Log Out</a></li>
+                <% } else { %>
+                    <li><a href="/login">Log In</a></li>
+                    <li><a href="/register">Register</a></li>
+                <% } %>
+            </ul>
+        </section>
+    </nav>
+
+    <div class="content-container">
+        <h1>My Orders</h1>
+
+        <% if (orderStatus === 'pending') { %>
+            <p>Your order is currently pending. Thank you for your purchase!</p>
+        <% } else { %>
+            <p>You have no orders.</p>
+        <% } %>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Perfume Heaven. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>
