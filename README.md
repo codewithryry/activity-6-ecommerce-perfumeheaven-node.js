@@ -60,10 +60,7 @@ Ecommerce Perfume Heaven is a Node.js-based e-commerce platform designed for sel
 
 Contributions are welcome! If you have suggestions or improvements, please fork the repository and submit a pull request.
 
-## License
-
-This project is licensed under the MIT License.
 
 ## Contact
 
-For inquiries or feedback, please reach out to [your-email@example.com](mailto:your-email@example.com).
+For inquiries or feedback, please reach out to [your-email@example.com](mailto:reymelrey.mislang@gmail.com).
