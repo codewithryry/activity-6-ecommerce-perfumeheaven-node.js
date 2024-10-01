@@ -9,6 +9,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(session({ secret: 'secret', resave: false, saveUninitialized: true }));
+app.use('/uploads', express.static('uploads'));
+
 
 // Routes
 app.use('/', require('./routes/index'));
